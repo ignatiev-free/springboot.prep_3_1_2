@@ -7,8 +7,6 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-
-
 @Data
 @Entity
 @Table(name = "users")
@@ -16,6 +14,7 @@ import lombok.*;
 @Getter
 @ToString
 @RequiredArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -38,4 +37,5 @@ public class User {
     @NotNull(message = "У User нет возраста")
     @Min(value = 1, message = "Возраст должен быть больше 0")
     private int age;
+
 }
